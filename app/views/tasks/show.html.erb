@@ -16,4 +16,12 @@
         </label>
       </div>
 <%  end %>
-<p><%= link_to "Back to list", tasks_path%> </p>
+
+<%= link_to tasks_path do %>
+  <i class="fa fa-home"></i>
+<% end %>
+
+<%= link_to edit_task_path do %>
+  <i class="fa fa-pencil"></i>
+<% end %>
+

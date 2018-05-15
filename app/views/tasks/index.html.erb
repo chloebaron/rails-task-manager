@@ -4,10 +4,15 @@
   <div class="form-check">
     <input class="form-check-input" type="checkbox" value="" id="defaultCheck<% task.id %>">
     <label class="form-check-label" for="defaultCheck<% task.id %>">
-      <h3><%= link_to task.title, task_path(task)%> </h3>
+      <h3><%= link_to task.title.capitalize, task_path(task)%> </h3>
     </label>
+    <%= link_to task_path(task), method: :delete, data: { confirm: "Are you sure?" } do %>
+      <i class="fa fa-trash-o" aria-hidden="true"></i>
+    <% end %>
+
   </div>
 <% end %>
+<btn class="btn-add"><%= link_to "Add new task!", tasks_new_path %></btn>
 
 
 
